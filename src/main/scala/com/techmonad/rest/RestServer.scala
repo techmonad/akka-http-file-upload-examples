@@ -13,7 +13,7 @@ object RestServer extends App with FileUploadApi {
 
   implicit val executionContext = system.dispatcher
 
-  val bindingFuture = Http().bindAndHandle(route, "0.0.0.0", 9000)
+  val bindingFuture = Http().newServerAt("0.0.0.0", 9000).bindFlow(route)
 
   println(s"Server online at http://localhost:9000/\nPress RETURN to stop...")
   StdIn.readLine() // let it run until user presses return
