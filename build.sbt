@@ -2,7 +2,7 @@ name := "akka-http-file-upload-examples"
 
 version := "0.1"
 
-scalaVersion := "2.13.5"
+scalaVersion := "2.13.8"
 
 
 libraryDependencies ++= Seq(
